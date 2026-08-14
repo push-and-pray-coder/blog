@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <h1>About Me</h1>
-    <p>Full Stack Student in Cohort 68. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, unde?</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+<h1>About Me</h1>
+<p>FSDI Student chohort 68. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, cum.</p>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/about.js' %}"></script>
+{% endblock %}
