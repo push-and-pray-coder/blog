@@ -6,9 +6,25 @@ from django.shortcuts import HttpResponse, render
 
 class HomePageView(TemplateView):
     template_name = "pages/home.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["name"] = "Bob"
+        print(context)
+        return context
+    
 class AboutPageView(TemplateView):
     template_name = "pages/about.html"
 # Function Based Views
 def contact_page(request):
     # return HttpResponse("Hellow World from a FBV")
-    return render(request, "pages/contact.html")
+
+    contact_info = {
+        "name" : "Bob",
+        "address" : "My address",
+        "email" : "bob@mail.com"
+    }
+
+    return render(request, "pages/contact.html", contact_info)
+
+
