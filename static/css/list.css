@@ -1,0 +1,19 @@
+body {
+    background-color: #E0B0FF;
+}
+
+.card {
+    background-color: #D190FF;
+}
+
+button{
+    padding: 8px;
+    border: none;
+    box-shadow: none;
+    background-color: #E0B0FF;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
